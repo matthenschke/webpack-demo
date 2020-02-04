@@ -9,8 +9,8 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.css$/,
-        use: ["style-loader", "css-loader"] // loaders always work in reverse from right to left, not left to right
+        test: /\.scss$/,
+        use: ["style-loader", "css-loader", "sass-loader"] // loaders always work in reverse from right to left, not left to right
       }
     ]
   }
