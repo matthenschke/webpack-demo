@@ -5,5 +5,13 @@ module.exports = {
   output: {
     filename: "main.js",
     path: path.resolve(__dirname, "build")
+  },
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"] // loaders always work in reverse from right to left, not left to right
+      }
+    ]
   }
 };
