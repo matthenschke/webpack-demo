@@ -11,7 +11,12 @@ module.exports = {
     rules: [
       {
         test: /\.scss$/,
-        use: ["style-loader", "css-loader", "sass-loader"] // loaders always work in reverse from right to left, not left to right
+        // loaders always work in reverse from right to left, not left to right
+        use: [
+          "style-loader", //inject styles to dom
+          "css-loader", // css to js
+          "sass-loader"
+        ] // sass to css
       },
       {
         test: /\.html$/,
